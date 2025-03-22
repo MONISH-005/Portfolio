@@ -15,10 +15,9 @@ Welcome to my personal portfolio! This repository showcases my skills, projects,
 - **Soft Skills**: Leadership, coordination, and teamwork.  
 
 ## Projects 🚀  
-Here’s a glimpse of the exciting projects featured:  
-- **E-Commerce App**: A dynamic online shopping experience.  
+Here’s a glimpse of the exciting projects featured:    
 - **AI-Chatbot spam detection**: chatbot for detecting spam messages 
-- **Direct Market App for Farmers**: Bridging farmers with markets via a mobile app.
+- **E-Commerce App for Rural Farmers**: Bridging farmers with markets via a mobile app.
 - **Blockchain technology for counterfeit product detection**: detection of fake products using blockchain
   
 ## 🎥 Live Demo  
