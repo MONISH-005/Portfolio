@@ -308,6 +308,20 @@ footer {
   .content {
     padding: 20px 10px;
   }
+  .first-home {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-container, .resume {
+    width: 100%;
+    text-align: center;
+  }
+  .profile-info h1 {
+    font-size: 3em;
+  }
+  .profile-info h2 {
+    font-size: 1.5em;
+  }
 }
 
 #loader {
@@ -599,15 +613,14 @@ Generic layout (demo looks)
   top: 0;
   border-radius: 10px;
 }
-
-/* Portfolio Page */
+ 
 body {
   background-color: black;
 }
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-columns: repeat(4, 1fr);  
   gap: 10px;
   margin-top: 30px;
 }
@@ -639,21 +652,21 @@ h2 {
   font-family: "Dancing Script";
 }
 
-/* Responsive Design for smaller screens */
+ 
 @media (max-width: 1200px) {
   .portfolio {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);  
   }
 }
 
 @media (max-width: 900px) {
   .portfolio {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);  
   }
 }
 
 @media (max-width: 600px) {
   .portfolio {
-    grid-template-columns: 1fr; /* 1 column for mobile screens */
+    grid-template-columns: 1fr;  
   }
 }
