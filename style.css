@@ -502,7 +502,7 @@ Generic layout (demo looks)
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  
 }
 
 
@@ -664,6 +664,7 @@ h2 {
     grid-template-columns: repeat(2, 1fr);  
   }
 }
+
 
 @media (max-width: 600px) {
   .portfolio {
