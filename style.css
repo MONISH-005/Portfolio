@@ -512,12 +512,7 @@ article:has(:hover, :focus) {
 Generic layout (demo looks)
 **************************/
 
-*,
-*::before,
-*::after {
-  
-}
-
+ 
 
 
 .articles {
