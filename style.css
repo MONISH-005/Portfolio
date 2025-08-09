@@ -16,7 +16,7 @@ h2 {
   font-weight: 1000;
 }
 
-/*header starts*/
+/*header starts
 
 .reg-head {
   font-family: "New Amsterdam", sans-serif;
@@ -83,7 +83,164 @@ h1 {
   font-family: "Dancing Script";
   font-weight: 100%;
 }
-/*header closes*/
+header closes*/
+
+
+
+.reg-head {
+  height: 10vh;
+  width: 100%;
+  margin-top: 5px;
+  background: rgba(4, 4, 4, 0.4);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00adb5;
+  text-decoration: none;
+}
+
+.navigation .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: #00adb5;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid #00adb5;
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown li {
+  text-align: left;
+  padding: 5px 20px;
+}
+
+.dropdown li a {
+  color: #000000;
+  font-size: 1rem;
+  display: block;
+}
+
+.dropdown li a:hover {
+  color: #ffffff;
+  background-color: rgba(0, 173, 181, 0.1);
+}
+/* Previous styles... keep them */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #00adb5;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navigation {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.95);
+    border-top: 1px solid #00adb5;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation.show {
+    display: flex;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .dropdown {
+    position: static;
+    background-color: transparent;
+    border: none;
+    display: none;
+    box-shadow: none;
+  }
+
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
+
+  .dropdown li a {
+    background-color: transparent;
+    padding: 5px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+
 /*INTRO*/
 .intro {
   display: flex;
@@ -96,7 +253,7 @@ h1 {
 /*about me starts*/
 .content {
   max-width: 1200px;
-  padding: 40px 20px;
+  padding: 70px 20px;
 }
 .about,
 .skills {
@@ -383,6 +540,7 @@ footer {
 .profile-info h1 {
   font-size: 4.5em;
   color: #00adb5;
+  font-family: 'Dancing Script';
 }
 
 .profile-info h2 {
@@ -751,3 +909,45 @@ h2 {
   margin: 4px 0;
   line-height: 1.6;
 }
+
+
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links h4 {
+    color: #00ADB5;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.4em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-decoration: none;
+}
+
+/* Platform Colors */
+.social-links a[href*="github"] { background-color: #24292e; }
+.social-links a[href*="linkedin"] { background-color: #0077b5; }
+.social-links a[href*="instagram"] { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); }
+.social-links a[href*="x.com"], 
+.social-links a[href*="twitter"] { background-color: #000; }
+
+/* Hover Glow Effect */
+.social-links a:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
