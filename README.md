@@ -21,7 +21,7 @@ Here’s a glimpse of the exciting projects featured:
 - **Blockchain technology for counterfeit product detection**: detection of fake products using blockchain
   
 ## 🎥 Live Demo  
-Check out the live version of my portfolio: [View Live Demo](https://monishnarasimman.github.io/Monish-Portfolio/)  
+Check out the live version of my portfolio: [View Live Demo](https://monish-005.github.io/Portfolio/)  
 
 
 ## 📝 Future Enhancements  
