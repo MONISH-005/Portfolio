@@ -16,77 +16,6 @@ h2 {
   font-weight: 1000;
 }
 
-/*header starts
-
-.reg-head {
-  font-family: "New Amsterdam", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-
-  height: 10vh;
-  width: 99%;
-  margin-top: 3px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: rgba(4, 4, 4, 0.379);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-.container {
-  margin: auto;
-  height: 10vh;
-  width: 85%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: none;
-}
-.logo a {
-  font-family: "Dancing Script";
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: #00adb5;
-  text-decoration: none;
-}
-nav {
-  margin-top: 20px;
-}
-nav a {
-  color: #00adb5;
-  margin: 0 15px;
-  text-decoration: none;
-  font-size: 1.2em;
-  border-color: #fff;
-}
-
-.navigation > ul {
-  list-style: none;
-  display: flex;
-  background-color: none;
-  gap: 2rem;
-  font-size: 1.3rem;
-  font-weight: 400;
-}
-
-li > a {
-  color: #00adb5;
-  text-decoration: none;
-}
-h1 {
-  margin: 0;
-  font-size: 2.5em;
-  color: #00adb5;
-  font-family: "Dancing Script";
-  font-weight: 100%;
-}
-header closes*/
-
-
-
 .reg-head {
   height: 10vh;
   width: 100%;
@@ -927,27 +856,83 @@ h2 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     margin: 10px;
     border-radius: 50%;
-    color: white;
     font-size: 1.4em;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     text-decoration: none;
+    background: transparent;
+    border: 3px solid currentColor; /* Default outline */
+    color: currentColor;
+    transition: transform 0.6s ease;
 }
 
-/* Platform Colors */
-.social-links a[href*="github"] { background-color: #24292e; }
-.social-links a[href*="linkedin"] { background-color: #0077b5; }
-.social-links a[href*="instagram"] { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); }
-.social-links a[href*="x.com"], 
-.social-links a[href*="twitter"] { background-color: #000; }
+/* Platform Outline Colors */
+.social-links a[href*="github"] { color: #74a5d6; }
+.social-links a[href*="linkedin"] { color: #0077b5; }
 
-/* Hover Glow Effect */
+.social-links a[href*="x.com"],
+.social-links a[href*="twitter"] { color: #7700c1; }
+
+/* Hover Spin Animation */
 .social-links a:hover {
-    transform: translateY(-4px) scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transform: rotate(360deg) scale(1.15);
 }
 
+.social-links a[href*="instagram"] {
+    position: relative;
+    color: #dd2a7b;
+    border: none; /* Remove normal border */
+    background: transparent;
+}
+
+.social-links a[href*="instagram"]::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 3px; /* Border thickness */
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Keep spin on hover */
+.social-links a[href*="instagram"]:hover {
+    transform: rotate(360deg) scale(1.15);
+}
+
+.more-projects-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-family: "Dancing Script";
+    font-weight: bold;
+    color: #00ADB5;
+    background: transparent;
+    border: 2px solid #00ADB5;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover animation with glow */
+.more-projects-btn:hover {
+    color: #000;
+    background: #00ADB5;
+    box-shadow: 0 0 15px #00ADB5, 0 0 30px #00ADB5;
+    transform: translateY(-3px);
+}
+
+/* Optional click effect */
+.more-projects-btn:active {
+    transform: translateY(0px) scale(0.98);
+}
